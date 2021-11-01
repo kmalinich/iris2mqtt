@@ -1,0 +1,35 @@
+[Unit]
+Description = Lowe's Iris Gen1 to MQTT/Home Assistant adapter application
+
+After = homeassistant.service mosquitto.service
+Wants = homeassistant.service mosquitto.service
+
+StartLimitIntervalSec = 10s
+StartLimitBurst       = 10
+
+
+[Service]
+SyslogIdentifier = iris2mqtt
+
+Type = simple
+
+User  = iot
+Group = iot
+
+WorkingDirectory = /usr/local/lib/iris2mqtt
+
+Environment = NODE_ENV=production
+
+ExecStart = /usr/bin/env node --title=iris2mqtt  --throw-deprecation --trace-uncaught --trace-deprecation --trace-warnings /usr/local/lib/iris2mqtt/index.js
+
+TimeoutStopSec = 30
+
+Restart    = on-failure
+RestartSec = 3
+
+
+[Install]
+WantedBy = multi-user.target
+
+
+# vim: set filetype=systemd ts=2 sw=2 tw=0 noet :

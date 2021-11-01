@@ -1,0 +1,13 @@
+*.bak
+*.log
+*.swo
+*.swp
+._*
+.DS_Store
+
+/*.json
+
+/json.bak/
+/log/
+/node_modules/
+/test/
