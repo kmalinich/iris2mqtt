@@ -27,8 +27,15 @@
 	},
 	"homepage": "https://github.com/kmalinich/iris2mqtt#readme",
 	"keywords": [
-		"hgbg",
-		"mqtt"
+		"adapter",
+		"hass",
+		"homeassistant",
+		"iot",
+		"iris",
+		"lowes",
+		"mqtt",
+		"mqtt",
+		"sensor"
 	],
 	"license": "UNLICENSED",
 	"main": "index.js",

@@ -1,7 +1,7 @@
 /* eslint no-console       : 0 */
 /* eslint no-global-assign : 0 */
 
-process.title = 'hgbg-mqtt';
+process.title = 'iris2mqtt';
 
 terminating = false;
 
